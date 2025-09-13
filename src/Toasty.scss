@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 0.5rem;
   z-index: 99999;
+  pointer-events: none;
   &.left {
     align-items: flex-start;
   }
