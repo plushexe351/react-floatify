@@ -30,13 +30,15 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
       animate={disableAnimation ? {} : { opacity: 1, y: 0, scale: 1 }}
       exit={disableAnimation ? {} : { opacity: 0, y: 50 }}
       className={`Toasty-container ${type} ${variant}`}
-      style={{ ...sx }}
+      style={{
+        boxShadow: elevationToBoxShadow(elevation),
+        ...sx,
+      }}
     >
       <div
         className="Toasty-message"
         style={{
           fontSize: fontSize,
-          boxShadow: elevationToBoxShadow(elevation),
         }}
       >
         {toast.type === "default" && ""}
