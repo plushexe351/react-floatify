@@ -17,10 +17,12 @@ export type Position =
   | "top center"
   | "bottom center";
 export type ToastVariant = "regular" | "outlined" | "contained";
+export type ToastSpacing = "small" | "regular" | "large";
 
 export interface ToastOptions {
   type?: ToastType;
   variant?: ToastVariant;
+  spacing?: ToastSpacing;
   duration?: number;
   disableAnimation?: boolean;
   showProgress?: boolean;
@@ -65,11 +67,12 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       type = "default",
       duration = 5,
       variant = "regular",
+      spacing = "regular",
       disableAnimation = false,
       showProgress = true,
       fontSize = 14,
       iconSize = 17,
-      elevation = 2,
+      elevation = 3,
       sx = {},
     } = options;
 
@@ -79,6 +82,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       message,
       type,
       variant,
+      spacing,
       duration,
       disableAnimation,
       showProgress,

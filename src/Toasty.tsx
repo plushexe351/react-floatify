@@ -16,6 +16,7 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
     type,
     variant,
     duration = 5,
+    spacing,
     disableAnimation,
     showProgress,
     fontSize,
@@ -36,7 +37,7 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
       }}
     >
       <div
-        className="Toasty-message"
+        className={`Toasty-message ${spacing}`}
         style={{
           fontSize: fontSize,
         }}
