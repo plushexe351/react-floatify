@@ -18,6 +18,7 @@ export type Position =
   | "bottom center";
 export type ToastVariant = "regular" | "outlined" | "contained";
 export type ToastSpacing = "small" | "regular" | "large";
+export type ToastSlideFrom = "left" | "top" | "right" | "bottom";
 
 export interface ToastOptions {
   type?: ToastType;
@@ -26,6 +27,7 @@ export interface ToastOptions {
   duration?: number;
   disableAnimation?: boolean;
   showProgress?: boolean;
+  slideFrom?: ToastSlideFrom;
   fontSize?: string | number;
   iconSize?: number;
   elevation?: number;
@@ -70,6 +72,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       spacing = "regular",
       disableAnimation = false,
       showProgress = true,
+      slideFrom,
       fontSize = 14,
       iconSize = 17,
       elevation = 3,
@@ -86,6 +89,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       duration,
       disableAnimation,
       showProgress,
+      slideFrom,
       fontSize,
       iconSize,
       elevation,

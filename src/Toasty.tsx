@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { type Toast } from "./ToastContext";
+import { type Toast, type ToastSlideFrom } from "./ToastContext";
 import { CheckCircle, TriangleAlert, XCircle } from "lucide-react";
 import { elevationToBoxShadow } from "./utils/elevationToBoxShadow";
+import { getSlideAnimation } from "./utils/getSlideAnimation";
 
 interface ToastyProps {
   toast: Toast;
@@ -17,32 +18,32 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
     variant,
     duration = 5,
     spacing,
-    disableAnimation,
+    disableAnimation = false,
     showProgress,
+    slideFrom = "bottom",
     fontSize,
     iconSize,
     elevation,
     sx,
   } = toast;
 
+  const { initial, animate, exit } = getSlideAnimation(
+    slideFrom,
+    disableAnimation
+  );
+
   return (
     <motion.div
-      initial={disableAnimation ? {} : { opacity: 0, y: 100, scale: 0.8 }}
-      animate={disableAnimation ? {} : { opacity: 1, y: 0, scale: 1 }}
-      exit={disableAnimation ? {} : { opacity: 0, y: 50 }}
+      initial={initial}
+      animate={animate}
+      exit={exit}
       className={`Toasty-container ${type} ${variant}`}
       style={{
         boxShadow: elevationToBoxShadow(elevation),
         ...sx,
       }}
     >
-      <div
-        className={`Toasty-message ${spacing}-spacing`}
-        style={{
-          fontSize: fontSize,
-        }}
-      >
-        {toast.type === "default" && ""}
+      <div className={`Toasty-message ${spacing}-spacing`} style={{ fontSize }}>
         {toast.type === "error" && <XCircle size={iconSize} />}
         {toast.type === "success" && <CheckCircle size={iconSize} />}
         {toast.type === "warning" && <TriangleAlert size={iconSize} />}
