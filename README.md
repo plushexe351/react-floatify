@@ -1,7 +1,7 @@
 # 🍞 react-floatify
 
 A lightweight, customizable toast notification library for React.  
-Built with **Framer Motion** for animations and **SCSS** for styling.  
+Built using **Framer Motion** for animation and **SCSS** for styling.  
 
 ## Features
 
@@ -10,7 +10,7 @@ Built with **Framer Motion** for animations and **SCSS** for styling.
 - Configurable duration + optional progress bar  
 - Option to disable animations  
 - Customizable `fontSize` and `iconSize`  
-- Override styles using `sx` or CSS variables  
+- Override styles using `sx`
 - Tiny, tree-shakable, easy to use  
 
 ---
@@ -39,10 +39,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   </React.StrictMode>
 );
 ```
-Trigger a toast with the `useToast` hook:
+Import CSS and Trigger a toast with the `useToast` hook:
 
-```tsx
+```jsx
 import { useToast } from "react-floatify";
+import "react-floatify/dist/react-floatify.css";
 
 function Example() {
   const { addToast } = useToast();
@@ -64,6 +65,17 @@ function Example() {
     </button>
   );
 }
+```
+
+### TypeScript Usage
+
+If you’re using TypeScript and your `type` or `variant` values come from component state, you should import the provided types to get full type safety:
+
+```tsx
+import { useToast, type ToastType, type ToastVariant } from "react-floatify";
+
+const [type, setType] = useState<ToastType>("default");
+const [variant, setVariant] = useState<ToastVariant>("regular");
 ```
 
 ## Options 
