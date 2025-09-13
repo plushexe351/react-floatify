@@ -1,19 +1,29 @@
 {
-  "name": "toasty-prod",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "react-floatify",                    
+  "version": "0.1.6",                         
+  "private": false,                           
+  "type": "module",                           
+  "main": "dist/index.umd.js", 
+  "module": "dist/index.es.js", 
+  "types": "dist/index.d.ts",                 
+  "style": "dist/react-floatify.css",                 
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"         
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": "^12",
+    "lucide-react": "^0.544.0"
   },
   "dependencies": {
-    "framer-motion": "^12.23.12",
-    "lucide-react": "^0.544.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
     "sass": "^1.92.1"
   },
   "devDependencies": {
@@ -28,5 +38,20 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plushexe351/react-floatify"
+  },
+  "keywords": [
+    "react",
+    "react-floatify",
+    "typescript",
+    "toast",
+    "notification",
+    "snackbar",
+    "ui",
+    "toasty"
+  ]
 }
