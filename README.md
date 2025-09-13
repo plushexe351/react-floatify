@@ -1,4 +1,4 @@
-# 🍞 react-floatify
+# react-floatify
 
 <img src="./global_assets/floatify.png" src="floatify logo" height="100" width="100"/>
 
