@@ -26,6 +26,7 @@ export interface ToastOptions {
   showProgress?: boolean;
   fontSize?: string | number;
   iconSize?: number;
+  elevation?: number;
   sx?: React.CSSProperties;
 }
 
@@ -68,6 +69,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       showProgress = true,
       fontSize = 14,
       iconSize = 17,
+      elevation = 2,
       sx = {},
     } = options;
 
@@ -82,6 +84,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       showProgress,
       fontSize,
       iconSize,
+      elevation,
       sx,
     };
 

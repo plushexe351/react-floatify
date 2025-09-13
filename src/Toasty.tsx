@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { type Toast } from "./ToastContext";
 import { CheckCircle, TriangleAlert, XCircle } from "lucide-react";
+import { elevationToBoxShadow } from "./utils/elevationToBoxShadow";
 
 interface ToastyProps {
   toast: Toast;
@@ -19,6 +20,7 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
     showProgress,
     fontSize,
     iconSize,
+    elevation,
     sx,
   } = toast;
 
@@ -30,7 +32,13 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
       className={`Toasty-container ${type} ${variant}`}
       style={{ ...sx }}
     >
-      <div className="Toasty-message" style={{ fontSize: fontSize }}>
+      <div
+        className="Toasty-message"
+        style={{
+          fontSize: fontSize,
+          boxShadow: elevationToBoxShadow(elevation),
+        }}
+      >
         {toast.type === "default" && ""}
         {toast.type === "error" && <XCircle size={iconSize} />}
         {toast.type === "success" && <CheckCircle size={iconSize} />}
