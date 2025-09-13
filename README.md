@@ -1,7 +1,7 @@
 # 🍞 react-floatify
 
 A lightweight, customizable toast notification library for React.  
-Built using **Framer Motion** for animation and **SCSS** for styling.  
+Built using **React** and for **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
 
 ## Features
 
