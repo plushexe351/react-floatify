@@ -1,3 +1,11 @@
+:root {
+  --toasty-color-primary: #4e4867;
+  --toasty-color-success: rgb(106, 197, 106);
+  --toasty-color-error: red;
+  --toasty-color-warning: rgb(255, 182, 25);
+  --toasty-color-contrast-text: rgb(238, 238, 238);
+}
+
 .Toasty-stack-modal {
   position: fixed;
   bottom: 0.5rem;
@@ -97,14 +105,14 @@
     > * {
       flex-shrink: 0;
     }
-    &.small {
+    &.small-spacing {
       padding: 0.5rem 1rem;
     }
-    &.regular {
+    &.regular-spacing {
       padding: 0.75rem 1.25rem;
     }
-    &.large {
-      padding: 0.1rem 1.5rem;
+    &.large-spacing {
+      padding: 1rem 1.5rem;
     }
   }
 }
