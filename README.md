@@ -7,6 +7,7 @@ Built using **React** and for **React**, **TypeScript**, **Framer Motion** for a
 
 - Multiple toast types: `success`, `error`, `warning`, `default`  
 - Variants: `regular`, `outlined`, `contained`  
+- Adjustable spacing and shadows
 - Configurable duration + optional progress bar  
 - Option to disable animations  
 - Customizable `fontSize` and `iconSize`  
