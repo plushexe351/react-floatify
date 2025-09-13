@@ -105,3 +105,21 @@ const [variant, setVariant] = useState<ToastVariant>("regular");
 ```tsx
 <ToastProvider position="bottom center">...</ToastProvider>
 ```
+## DOM Structure
+
+Each toast is rendered inside a `.Toast-stack-modal`.  
+The basic DOM structure looks like this for a toast with `type:"success"`, `variant:"regular"`, `iconSize:17`, `spacing:"regular"` and `showProgress:true`:
+
+```html
+<div class="Toast-stack-modal">
+  <div class="Toasty-container success regular">
+    <div class="Toasty-message regular-spacing">
+      <CheckCircle size={17}/> // lucide-react icon
+      Welcome to Floatify
+    </div>
+    <div class="Toasty-progress-container">
+      <div class="Toasty-progress-bar success"></div>
+    </div>
+  </div>
+</div>
+```
