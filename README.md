@@ -1,5 +1,38 @@
 # 🍞 react-floatify
 
+<img src="./global_assets/floatify.png" src="floatify logo"/>
+
+<a
+                  href="https://www.npmjs.com/package/react-floatify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.shields.io/npm/v/react-floatify"
+                    alt="npm version"
+                  />
+                </a>
+                <a
+                  href="https://opensource.org/licenses/MIT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.shields.io/badge/License-MIT-green.svg"
+                    alt="License: MIT"
+                  />
+                </a>
+                <a
+                  href="https://github.com/plushexe351"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.shields.io/badge/github-plushexe351-181717?logo=github"
+                    alt="GitHub: plushexe351"
+                  />
+                </a>
+
 A lightweight, customizable toast notification library for React.  
 Built using **React** and for **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
 
@@ -30,7 +63,7 @@ Wrap your app with the `ToastProvider`:
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { ToastProvider } from "toasty-react";
+import { ToastProvider } from "react-floatify";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
