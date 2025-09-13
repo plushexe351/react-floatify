@@ -7,7 +7,7 @@ Built using **React** and for **React**, **TypeScript**, **Framer Motion** for a
 
 - Multiple toast types: `success`, `error`, `warning`, `default`  
 - Variants: `regular`, `outlined`, `contained`  
-- Adjustable spacing and shadows
+- Adjustable spacing, shadows, position and pop-in-out directions
 - Configurable duration + optional progress bar  
 - Option to disable animations  
 - Customizable `fontSize` and `iconSize`  
@@ -91,6 +91,17 @@ const [variant, setVariant] = useState<ToastVariant>("regular");
 | `disableAnimation` | `boolean`                                    | `false`    | Disable entry/exit animations         |
 | `elevation` | `number`                                            | `3`         | Box Shadow on Toast Container        |
 | `showProgress`     | `boolean`                                    | `true`     | Show progress bar                     |
+| `slideFrom`     | `"left"`\|`"right"`\|`"bottom"`\|`"top"`        | `"right"`     | Slide-from direction (slides back into that direction)                    |
+| `position`     | `"top left"`\|`"top right"`\|`"top center"`\|`"bottom left"`        | `"bottom right"`\|`"bottom center"`     | Position on Screen                |
+| `showProgress`     | `boolean`                                    | `true`     | Show progress bar                     |
 | `fontSize`         | `string` \| `number`                         | `14`       | Font size for message text            |
 | `iconSize`         | `number`                                     | `17`       | Icon size                             |
 | `sx`               | `React.CSSProperties`                        | `{}`       | Inline style overrides                |
+
+### `position` prop must be used in `ToastProvider`
+
+####Example usage:
+
+```tsx
+<ToastProvider position="bottom center">...</ToastProvider>
+```

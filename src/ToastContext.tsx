@@ -72,7 +72,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       spacing = "regular",
       disableAnimation = false,
       showProgress = true,
-      slideFrom,
+      slideFrom = "right",
       fontSize = 14,
       iconSize = 17,
       elevation = 3,
