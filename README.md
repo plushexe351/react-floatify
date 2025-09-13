@@ -54,6 +54,7 @@ function Example() {
         addToast("Hello World!", {
           type: "success",
           variant: "contained",
+          spacing:"regular",
           duration: 4,
           fontSize: 16,
           iconSize: 20,
@@ -85,7 +86,9 @@ const [variant, setVariant] = useState<ToastVariant>("regular");
 | `type`             | `"success"` \| `"error"` \| `"warning"` \| `"default"` | `"default"` | Toast style                           |
 | `variant`          | `"regular"` \| `"outlined"` \| `"contained"`  | `"regular"` | Visual variant                        |
 | `duration`         | `number`                                     | `5`        | Duration in seconds                   |
+| `spacing`         | `"small"` \| `"regular"` \| `"large"`         | `"regular`  | Message Padding                    |
 | `disableAnimation` | `boolean`                                    | `false`    | Disable entry/exit animations         |
+| `elevation` | `number`                                            | `3`         | Box Shadow on Toast Container        |
 | `showProgress`     | `boolean`                                    | `true`     | Show progress bar                     |
 | `fontSize`         | `string` \| `number`                         | `14`       | Font size for message text            |
 | `iconSize`         | `number`                                     | `17`       | Icon size                             |
