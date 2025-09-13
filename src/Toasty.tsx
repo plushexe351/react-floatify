@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { type Toast, type ToastSlideFrom } from "./ToastContext";
+import { type Toast } from "./ToastContext";
 import { CheckCircle, TriangleAlert, XCircle } from "lucide-react";
 import { elevationToBoxShadow } from "./utils/elevationToBoxShadow";
 import { getSlideAnimation } from "./utils/getSlideAnimation";

@@ -1,3 +1,3 @@
 import "./Toasty.scss";
-export { ToastProvider, useToast, type ToastType, type ToastVariant, type ToastSpacing } from "./ToastContext";
+export { ToastProvider, useToast, type ToastType, type ToastVariant, type ToastSpacing, type ToastSlideFrom } from "./ToastContext";
 export { default as Toasty } from "./Toasty";
