@@ -47,6 +47,9 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow: hidden;
   background-color: unset;
+  &.outlined {
+    background-color: white;
+  }
 
   &.success {
     color: var(--toasty-color-success);

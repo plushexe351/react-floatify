@@ -36,6 +36,8 @@
 A lightweight, customizable toast notification library for React.  
 Built using **React** and for **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
 
+Test is out in this custom playground built for `react-floatify` : https://toasty-playground-ten.vercel.app/
+
 ## Features
 
 - Multiple toast types: `success`, `error`, `warning`, `default`  
@@ -133,7 +135,7 @@ const [variant, setVariant] = useState<ToastVariant>("regular");
 
 ### `position` prop must be used in `ToastProvider`
 
-####Example usage:
+#### Example usage:
 
 ```tsx
 <ToastProvider position="bottom center">...</ToastProvider>
