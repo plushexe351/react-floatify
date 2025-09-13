@@ -48,7 +48,9 @@
   overflow: hidden;
   background-color: unset;
   &.outlined {
-    background-color: white;
+    background-color: inherit;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
   }
 
   &.success {
