@@ -1,6 +1,6 @@
 # 🍞 react-floatify
 
-<img src="./global_assets/floatify.png" src="floatify logo" height={100} width={100}/>
+<img src="./global_assets/floatify.png" src="floatify logo" height="100" width="100"/>
 
 <a
                   href="https://www.npmjs.com/package/react-floatify"
