@@ -27,6 +27,7 @@ export interface ToastOptions {
   duration?: number;
   disableAnimation?: boolean;
   showProgress?: boolean;
+  showIcon?: boolean;
   slideFrom?: ToastSlideFrom;
   fontSize?: string | number;
   iconSize?: number;
@@ -72,6 +73,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       spacing = "regular",
       disableAnimation = false,
       showProgress = true,
+      showIcon = true,
       slideFrom = "right",
       fontSize = 14,
       iconSize = 17,
@@ -89,6 +91,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       duration,
       disableAnimation,
       showProgress,
+      showIcon,
       slideFrom,
       fontSize,
       iconSize,

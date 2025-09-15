@@ -20,6 +20,7 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
     spacing,
     disableAnimation = false,
     showProgress,
+    showIcon,
     slideFrom = "bottom",
     fontSize,
     iconSize,
@@ -44,10 +45,14 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
       }}
     >
       <div className={`Toasty-message ${spacing}-spacing`} style={{ fontSize }}>
-        {toast.type === "error" && <XCircle size={iconSize} />}
-        {toast.type === "success" && <CheckCircle size={iconSize} />}
-        {toast.type === "warning" && <TriangleAlert size={iconSize} />}
-        {message}
+        {showIcon && (
+          <>
+            {toast.type === "error" && <XCircle size={iconSize} />}
+            {toast.type === "success" && <CheckCircle size={iconSize} />}
+            {toast.type === "warning" && <TriangleAlert size={iconSize} />}
+            {message}
+          </>
+        )}
       </div>
       {showProgress && (
         <div className="Toasty-progress-container">
