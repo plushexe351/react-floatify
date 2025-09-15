@@ -1,5 +1,7 @@
 # react-floatify
 
+A lightweight, customizable toast notification library for React.  
+
 <img src="./global_assets/floatify.png" src="floatify logo" height="100" width="100"/>
 
 <a
@@ -33,8 +35,7 @@
                   />
                 </a>
 
-A lightweight, customizable toast notification library for React.  
-Built using **React** and for **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
+Built for **React** using  **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
 
 Test is out in this custom playground built for `react-floatify` : https://toasty-playground-ten.vercel.app/
 
