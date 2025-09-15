@@ -50,9 +50,9 @@ const Toasty: React.FC<ToastyProps> = ({ toast }) => {
             {toast.type === "error" && <XCircle size={iconSize} />}
             {toast.type === "success" && <CheckCircle size={iconSize} />}
             {toast.type === "warning" && <TriangleAlert size={iconSize} />}
-            {message}
           </>
         )}
+        {message}
       </div>
       {showProgress && (
         <div className="Toasty-progress-container">
