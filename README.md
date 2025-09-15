@@ -37,7 +37,7 @@ A lightweight, customizable toast notification library for React.
 
 Built for **React** using  **React**, **TypeScript**, **Framer Motion** for animation and **SCSS** for styling.  
 
-Test is out in this custom playground built for `react-floatify` : https://toasty-playground-ten.vercel.app/
+Test it out in this custom playground built for `react-floatify` : https://toasty-playground-ten.vercel.app/
 
 ## Features
 
