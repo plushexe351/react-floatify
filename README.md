@@ -129,6 +129,7 @@ const [variant, setVariant] = useState<ToastVariant>("regular");
 | `slideFrom`     | `"left"`\|`"right"`\|`"bottom"`\|`"top"`        | `"right"`     | Slide-from direction (slides back into that direction)                    |
 | `position`     | `"top left"`\|`"top right"`\|`"top center"`\|`"bottom left"`        | `"bottom right"`\|`"bottom center"`     | Position on Screen                |
 | `showProgress`     | `boolean`                                    | `true`     | Show progress bar                     |
+| `showIcon`     | `boolean`                                    | `true`     | Show Icon (`type: "default"` has no icon)                     |
 | `fontSize`         | `string` \| `number`                         | `14`       | Font size for message text            |
 | `iconSize`         | `number`                                     | `17`       | Icon size                             |
 | `sx`               | `React.CSSProperties`                        | `{}`       | Inline style overrides                |
